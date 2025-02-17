@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+		"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <!--call By  Controller Front  -->
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+      <property name="mappings">
+        <props>
+          <prop key="/empsave.dc">empcurd</prop>
+          <prop key="/empupdate.dc">empcurd</prop>
+        </props>
+       </property>
+    </bean>
+
+     <!-- <bean id="empcurd" class="mycontroller.SaveUpdateController"/>   -->
+   
+   
+    <bean id="empcurd" class="mycontroller.SaveUpdateController">
+     <property name="methodNameResolver">
+       <bean class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+        <property name="prefix" value="Ducat"/> 
+        <property name="suffix" value="Curd"/>  
+       </bean> 
+     </property>
+    </bean>   
+   
+   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+     <property name="prefix" value="/"/>
+     <property name="suffix" value=".jsp"/>
+   </bean>   
+</beans>

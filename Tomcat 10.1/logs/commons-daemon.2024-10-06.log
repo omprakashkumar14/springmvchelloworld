@@ -1,0 +1,8 @@
+[2024-10-06 21:45:22] [info]  [17060] Apache Commons Daemon procrun (1.4.0.0 64-bit) started.
+[2024-10-06 21:45:23] [info]  [17060] Running Service 'Tomcat10'...
+[2024-10-06 21:45:23] [info]  [19112] Starting service...
+[2024-10-06 21:45:23] [error] [17620] FindClass org/apache/catalina/startup/Bootstrap failed
+[2024-10-06 21:45:23] [error] [19112] Failed to start Java
+[2024-10-06 21:45:24] [error] [19112] ServiceStart returned 4.
+[2024-10-06 21:45:24] [info]  [17060] Run service finished.
+[2024-10-06 21:45:24] [info]  [17060] Apache Commons Daemon procrun finished.
